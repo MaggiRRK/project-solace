@@ -1,25 +1,231 @@
 @import "tailwindcss";
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* =========================================================
+   RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  background:#FFF8F0;
-  color:#3D2C24;
-  overflow:hidden;
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-button{
-  cursor:pointer;
+button {
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-::selection{
-  background:#FFD6E8;
+::selection {
+  background: rgba(235, 199, 190, 0.55);
+}
+
+/* =========================================================
+   PROJECT SOLACE DESIGN TOKENS
+========================================================= */
+
+:root {
+  /* Backgrounds */
+  --background: #fdfbf8;
+  --surface: #fff9f2;
+  --surface-2: #fffdf9;
+
+  /* Brand */
+  --primary: #b6845e;
+  --secondary: #ebc7be;
+
+  /* Accent */
+  --sage: #90ae8c;
+  --moon: #a7cbea;
+  --gold: #d7b45d;
+
+  /* Text */
+  --text: #4f3a2f;
+  --subtext: #85776d;
+  --muted: #b6a99e;
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+
+  /* Shadows */
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  --shadow-card: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  --shadow-glow: 0 0 50px rgba(255, 236, 180, 0.25);
+
+  /* Animation */
+  --transition-fast: 200ms ease;
+  --transition-medium: 350ms ease;
+  --transition-slow: 600ms ease;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.heading {
+  font-family: var(--font-heading);
+}
+
+.bodyFont {
+  font-family: var(--font-body);
+}
+
+.handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.title-xl {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.title-lg {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.title-md {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.body-lg {
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
+
+.body-md {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: var(--subtext);
+}
+
+/* =========================================================
+   COMPONENT HELPERS
+========================================================= */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius-lg);
+}
+
+.story-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+}
+
+.cozy-button {
+  background: var(--secondary);
+  color: var(--text);
+  border-radius: 16px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.cozy-button:hover {
+  transform: translateY(-2px);
+}
+
+.soft-shadow {
+  box-shadow: var(--shadow-soft);
+}
+
+.glow-shadow {
+  box-shadow: var(--shadow-glow);
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes floatSlow {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: .5;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .5;
+  }
+}
+
+.glow {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* =========================================================
+   UTILITIES
+========================================================= */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
