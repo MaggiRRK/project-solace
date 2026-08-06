@@ -39,7 +39,33 @@ const dancing = Dancing_Script({
 
 export const metadata: Metadata = {
   title: "Project Solace",
-  description: "A little world built with code.",
+  description: "A little room filled with memories, comfort and kindness.",
+
+  manifest: "/manifest.webmanifest",
+
+  themeColor: "#FFF9F4",
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Project Solace",
+  },
+
+  icons: {
+    icon: [
+      {
+        url: "/icons/icon-192.png",
+        sizes: "192x192",
+        type: "image/png",
+      },
+      {
+        url: "/icons/icon-512.png",
+        sizes: "512x512",
+        type: "image/png",
+      },
+    ],
+    apple: "/icons/icon-192.png",
+  },
 };
 
 export default function RootLayout({
