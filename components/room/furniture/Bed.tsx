@@ -30,24 +30,20 @@ export default function Bed({
   return (
     <motion.button
       onClick={handleClick}
-      whileHover={{
-        scale: 1.01,
-      }}
-      whileTap={{
-        scale: 0.98,
-      }}
+      whileHover={{ scale: 1.01 }}
+      whileTap={{ scale: 0.98 }}
       animate={
         clicked
           ? {
-              scale: [1, 0.98, 1],
-              rotate: [0, -0.5, 0.5, 0],
+              rotate: [0, -0.6, 0.6, 0],
+              scale: [1, 0.985, 1],
             }
           : {
               y: [0, -2, 0],
             }
       }
       transition={{
-        duration: clicked ? 0.8 : 5,
+        duration: clicked ? 0.7 : 5,
         repeat: clicked ? 0 : Infinity,
         ease: "easeInOut",
       }}

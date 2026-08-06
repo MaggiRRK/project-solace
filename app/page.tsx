@@ -4,11 +4,10 @@ import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
 import LoadingScreen from "@/components/loading/LoadingScreen";
-import BookCover from "@/components/book/BookCover";
-import IntroPages from "@/components/book/IntroPages";
+import FlowerIntro from "@/components/intro/FlowerIntro";
 import Room from "@/components/room/Room";
 
-type Stage = "loading" | "book" | "intro" | "room";
+type Stage = "loading" | "flowers" | "room";
 
 export default function Home() {
   const [stage, setStage] = useState<Stage>("loading");
@@ -18,27 +17,18 @@ export default function Home() {
       {stage === "loading" && (
         <LoadingScreen
           key="loading"
-          onFinish={() => setStage("book")}
+          onFinish={() => setStage("flowers")}
         />
       )}
 
-      {stage === "book" && (
-        <BookCover
-          key="book"
-          onOpen={() => setStage("intro")}
+      {stage === "flowers" && (
+        <FlowerIntro
+          key="flowers"
+          onContinue={() => setStage("room")}
         />
       )}
 
-      {stage === "intro" && (
-        <IntroPages
-          key="intro"
-          onFinish={() => setStage("room")}
-        />
-      )}
-
-      {stage === "room" && (
-        <Room key="room" />
-      )}
+      {stage === "room" && <Room key="room" />}
     </AnimatePresence>
   );
 }

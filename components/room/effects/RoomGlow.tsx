@@ -14,18 +14,20 @@ export default function RoomGlow({
       {/* Main Warm Glow */}
       <motion.div
         animate={{
-          opacity: lampOn ? 0.55 : 0.28,
-          scale: lampOn ? 1.15 : 1,
-        }}
-        transition={{
-          duration: 0.8,
-        }}
+  opacity: lampOn
+    ? [0.7, 0.85, 0.7]
+    : 0,
+}}
+transition={{
+  duration: 4,
+  repeat: Infinity,
+}}
         className="
           absolute
           right-12
           bottom-0
-          h-[650px]
-          w-[650px]
+          h-162.5
+          w-162.5
           rounded-full
           bg-[#FFD88A]
           blur-[140px]

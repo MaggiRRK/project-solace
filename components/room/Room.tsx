@@ -7,12 +7,12 @@ import RoomCanvas from "./RoomCanvas";
 
 import Wall from "./Wall";
 import Floor from "./Floor";
-
+import NotebookModal from "../notebook/NotebookModal";
 import Notebook from "../notebook/Notebook";
-
 import AnimatedReveal from "../common/AnimatedReveal";
-
+import RecordPlayer from "./furniture/RecordPlayer";
 import Window from "./furniture/Window";
+import ThoughtNote from "./furniture/ThoughtNote";
 import Shelf from "./furniture/Shelf";
 import ThoughtJar from "./furniture/ThoughtJar";
 import NightOverlay from "./effects/NightOverlay";
@@ -35,6 +35,8 @@ export default function Room() {
   const [lampOn, setLampOn] = useState(false);
   const [notebookVisible, setNotebookVisible] = useState(false);
 const [notebookFound, setNotebookFound] = useState(false);
+const [showThought, setShowThought] = useState(false);
+const [notebookOpen, setNotebookOpen] = useState(false);
   return (
     <motion.main
       initial={{ opacity: 0, scale: 0.99 }}
@@ -106,8 +108,23 @@ const [notebookFound, setNotebookFound] = useState(false);
         </div>
 
         <div className="absolute right-6 top-2 z-30">
-          <ThoughtJar />
+          <ThoughtJar
+    onOpen={() => setShowThought(true)}
+/>
         </div>
+
+        {showThought && (
+  <div
+    className="fixed inset-0 z-20"
+    onClick={() => setShowThought(false)}
+  />
+)}
+        <div className="absolute right-28 top-8 z-30">
+  <ThoughtNote
+  open={showThought}
+  onClose={() => setShowThought(false)}
+/>
+</div>
 
         {/* ================= FLOOR ================= */}
 
@@ -124,22 +141,37 @@ const [notebookFound, setNotebookFound] = useState(false);
           </div>
 
           {/* Bed */}
-          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 z-30">
-            <Bed
-  onRevealNotebook={() => {
-  if (notebookFound) return;
+          <div
+  className="
+    absolute
+    bottom-20
+    left-1/2
+    translate-x-[-44%]
+    z-30
+  "
+>
+    <Bed
+      onRevealNotebook={() => {
+        if (notebookFound) return;
 
-  setNotebookFound(true);
+        setNotebookFound(true);
 
-  setTimeout(() => {
-    setNotebookVisible(true);
-  }, 350);
-}}
-/>
-          </div>
-          <AnimatedReveal show={notebookVisible} delay={0.3}>
+        setTimeout(() => {
+          setNotebookVisible(true);
+        }, 350);
+      }}
+    />
+</div>
+          <AnimatedReveal
+  show={notebookVisible}
+  delay={0}
+>
   <div className="absolute bottom-36 left-[48%] z-40">
-    <Notebook />
+    <Notebook
+      open={notebookOpen}
+      onOpen={() => setNotebookOpen(true)}
+      onClose={() => setNotebookOpen(false)}
+    />
   </div>
 </AnimatedReveal>
          
@@ -159,6 +191,13 @@ const [notebookFound, setNotebookFound] = useState(false);
             <Teddy />
           </div>
 
+          {/* Record Player */}
+{/* Record Player */}
+{/* Record Player */}
+<div className="absolute top-[42%] left-1/2 -translate-x-1/2 z-40">
+  <RecordPlayer />
+</div>
+
           {/* Gift */}
           <div className="absolute bottom-16 right-8 z-30">
             <Gift />
@@ -166,6 +205,12 @@ const [notebookFound, setNotebookFound] = useState(false);
 
         </div>
 
+   
+
+    <NotebookModal
+  open={notebookOpen}
+  onClose={() => setNotebookOpen(false)}
+/>
       </RoomCanvas>
     </motion.main>
   );

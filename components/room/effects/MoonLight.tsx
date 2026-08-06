@@ -6,13 +6,13 @@ export default function MoonLight() {
   return (
     <motion.div
       animate={{
-        opacity: [0.08, 0.13, 0.08],
-      }}
-      transition={{
-        duration: 7,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+  opacity: [0.25, 0.35, 0.25],
+}}
+transition={{
+  duration: 10,
+  repeat: Infinity,
+  ease: "easeInOut",
+}}
       className="
         absolute
         left-10

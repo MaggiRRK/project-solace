@@ -1,46 +1,43 @@
 "use client";
 
-import { useState } from "react";
 import { motion } from "framer-motion";
-
 import NotebookIllustration from "../room/svg/NotebookIllustration";
-import NotebookModal from "./NotebookModal";
 
-export default function Notebook() {
-  const [open, setOpen] = useState(false);
+interface Props {
+  open: boolean;
+  onOpen: () => void;
+  onClose: () => void;
+}
 
+export default function Notebook({
+  open,
+  onOpen,
+}: Props) {
   return (
-    <>
-      <motion.button
-        onClick={() => setOpen(true)}
-        whileHover={{
-          y: -6,
-          rotate: -2,
-          scale: 1.03,
-        }}
-        whileTap={{
-          scale: 0.96,
-        }}
-        animate={{
-  y: [0, -3, 0],
-  rotate: [-1, 1, -1],
+    <motion.button
+      onClick={onOpen}
+      whileHover={{
+  scale: 1.05,
+  y: -4,
+  rotate: -2,
 }}
-        transition={{
-  duration: 4,
-  repeat: Infinity,
-  ease: "easeInOut",
-}}
-        className="cursor-pointer"
-      >
-        <div className="w-28 drop-shadow-xl">
-          <NotebookIllustration />
-        </div>
-      </motion.button>
-
-      <NotebookModal
-        open={open}
-        onClose={() => setOpen(false)}
-      />
-    </>
+      whileTap={{
+        scale: 0.96,
+      }}
+      animate={{
+        y: [0, -3, 0],
+        rotate: [-1, 1, -1],
+      }}
+      transition={{
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
+      className="cursor-pointer"
+    >
+      <div className="w-28 drop-shadow-[0_15px_35px_rgba(0,0,0,0.18)]">
+        <NotebookIllustration />
+      </div>
+    </motion.button>
   );
 }

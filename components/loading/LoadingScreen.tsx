@@ -18,7 +18,7 @@ const messages = [
   "Checking smile...",
   "Collecting warm memories...",
   "Building your little world...",
-  "Almost ready..."
+  "Almost ready...",
 ];
 
 interface LoadingScreenProps {
@@ -35,15 +35,15 @@ export default function LoadingScreen({
   useEffect(() => {
     if (index >= messages.length - 1) {
       const timer = setTimeout(() => {
-  onFinish();
-}, 2200);
+        onFinish();
+      }, 2200);
 
       return () => clearTimeout(timer);
     }
 
     const timer = setTimeout(() => {
-  setIndex((prev) => prev + 1);
-}, 2400);
+      setIndex((prev) => prev + 1);
+    }, 2400);
 
     return () => clearTimeout(timer);
   }, [index, onFinish]);

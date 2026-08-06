@@ -9,6 +9,8 @@ import {
   Dancing_Script,
 } from "next/font/google";
 
+import { MusicProvider } from "@/components/music/MusicProvider";
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
@@ -59,7 +61,9 @@ export default function RootLayout({
           text-[#4F3A2F]
         `}
       >
-        {children}
+        <MusicProvider>
+          {children}
+        </MusicProvider>
       </body>
     </html>
   );

@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-
+import GiftLetter from "./GiftLetter";
 import GiftIllustration from "../svg/GiftIllustration";
-import GiftModal from "../../UI/GiftModal";
+
 
 export default function Gift() {
-  const [open, setOpen] = useState(false);
+ const [showGift, setShowGift] = useState(false);
 
   return (
     <>
@@ -16,9 +16,10 @@ export default function Gift() {
         whileHover={{
           scale: 1.08,
           rotate: -3,
+          y: -6,
         }}
         whileTap={{
-          scale: 0.92,
+          scale: 0.94,
         }}
         animate={{
           y: [0, -3, 0],
@@ -26,16 +27,21 @@ export default function Gift() {
         transition={{
           duration: 2.5,
           repeat: Infinity,
+          ease: "easeInOut",
         }}
-        onClick={() => setOpen(true)}
+        onClick={() => setShowGift(true)}
       >
         <GiftIllustration />
       </motion.div>
-
-      <GiftModal
-        open={open}
-        onClose={() => setOpen(false)}
-      />
+        {showGift && (
+  <div className="absolute right-full mr-6 bottom-32 z-50">
+    <GiftLetter
+      open={showGift}
+      onClose={() => setShowGift(false)}
+    />
+  </div>
+)}
+      
     </>
   );
 }
