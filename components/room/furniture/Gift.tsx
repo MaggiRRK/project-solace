@@ -48,13 +48,10 @@ export default function Gift() {
 
         {showGift && (
    <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
-    <div
-  className="fixed inset-0 z-50 flex items-center justify-center bg-black/60"
->
-  <div className="bg-white p-10 rounded-xl">
-    Hello
-  </div>
-</div>
+    <GiftLetter
+      open={showGift}
+      onClose={() => setShowGift(false)}
+    />
   </div>
 )}
       
