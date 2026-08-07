@@ -120,31 +120,21 @@ They're simply meant to remind someone that they mattered."
 
 Dear You,
 
-I don't really know how to begin this.
+I wasn't really sure how to begin this.
 
 Maybe by saying thank you.
 
-Thank you for the conversations, the smiles, the little moments you probably didn't think much of, but somehow became special to me. Whether you realized it or not, you made my days brighter.
+Thank you for every conversation, every smile, and every little moment that made ordinary days feel a little brighter.
 
-This little room is my way of saying that.
+This tiny world is simply my way of giving something back. Every corner, every interaction, every little detail was made with care, hoping it would make you smile.
 
-Every corner, every little interaction, every detail was made with care because I wanted to leave you with something that would hopefully make you smile, even if only for a few minutes.
+I understand and respect the decision you made, and I never want this to make you feel pressured in any way.
 
-I know life isn't always simple, and I understand why you made the decision you did. I respect that, and I never want you to feel pressured by anything written here.
+I just wanted you to know that meeting you was genuinely one of the nicest parts of my year.
 
-I just wanted to be honest about one thing.
+I'll continue making dua that Allah guides both of us toward whatever is best. Whether our paths cross again someday or not, I'll always be grateful that they crossed at all.
 
-Meeting you was a blessing in my life.
-
-I'll continue making dua that Allah guides both of us toward whatever is best for us. If our paths are meant to cross again someday, I'll be grateful. And if they aren't, I'll still be thankful that they crossed at all.
-
-More than anything, I hope you find happiness, peace, and people who remind you every day how valuable you are.
-
-So whenever life feels a little overwhelming, maybe come back to this room, read a note from the jar, play a song, or just sit here for a while.
-
-I hope it brings you even a small amount of comfort.
-
-Thank you... for being part of my story.
+Whenever life feels a little overwhelming, come back here, read a note, play a song, or just spend a few quiet minutes in this room.
 
 Take care of yourself.
 
