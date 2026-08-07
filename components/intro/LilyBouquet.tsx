@@ -66,7 +66,7 @@ export default function LilyBouquet() {
         }}
       >
         <Image
-          src="/images/lillies.png"
+          src="/images/liliies2.png"
           alt="Lilies"
           width={430}
           height={540}
