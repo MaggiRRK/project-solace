@@ -89,8 +89,8 @@ z-50
       <Image
   src="/images/letter.png"
   alt="Letter"
-  width={800}
-  height={1200}
+  width={100}
+  height={300}
   className="w-full h-auto rounded-lg shadow-md"
 />
 
