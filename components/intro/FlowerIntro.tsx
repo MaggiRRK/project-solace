@@ -12,7 +12,7 @@ export default function FlowerIntro({
   onContinue,
 }: Props) {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#FFFBF7]">
+    <main className="flex min-h-screen items-center justify-center bg-black">
       <FloatingPetals />
       <div className="flex flex-col items-center">
 
