@@ -18,26 +18,21 @@ export default function GiftLetter({
     <AnimatePresence>
       {open && (
         <motion.div
-          initial={{
-            opacity: 0,
-            x: -30,
-            scaleX: 0.2,
-            rotate: -2,
-          }}
-          animate={{
-            opacity: 1,
-            x: 0,
-            scaleX: 1,
-            rotate: 0,
-          }}
-          exit={{
-            opacity: 0,
-            x: -30,
-            scaleX: 0.2,
-          }}
-          transition={{
-            duration: 0.45,
-          }}
+        initial={{
+    opacity:0
+}}
+
+animate={{
+    opacity:1
+}}
+
+exit={{
+    opacity:0
+}}
+
+transition={{
+    duration:0.25
+}}
           className="
 fixed
 left-1/2
@@ -55,7 +50,7 @@ border
 border-[#E7D8C7]
 bg-[#FFFCF8]
 p-6
-shadow-[0_25px_60px_rgba(0,0,0,0.35)]
+shadow-xl
 z-50
 "
         >
@@ -85,20 +80,16 @@ z-50
             {reading && (
               <motion.div
                 initial={{
-                  opacity: 0,
-                  scaleY: 0,
-                }}
-                animate={{
-                  opacity: 1,
-                  scaleY: 1,
-                }}
-                exit={{
-                  opacity: 0,
-                  scaleY: 0,
-                }}
-                transition={{
-                  duration: 0.35,
-                }}
+    opacity:0
+}}
+
+animate={{
+    opacity:1
+}}
+
+exit={{
+    opacity:0
+}}
                 className="
                   origin-top
                   mt-6
