@@ -194,7 +194,7 @@ const [notebookOpen, setNotebookOpen] = useState(false);
           {/* Record Player */}
 {/* Record Player */}
 {/* Record Player */}
-<div className="absolute top-[42%] left-1/2 -translate-x-1/2 z-40">
+<div className="absolute top-[42%] left-1/2 -translate-x-1/2 z-30">
   <RecordPlayer />
 </div>
 

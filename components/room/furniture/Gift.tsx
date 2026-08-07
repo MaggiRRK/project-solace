@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import GiftLetter from "./GiftLetter";
 import GiftIllustration from "../svg/GiftIllustration";
 
@@ -22,8 +22,9 @@ export default function Gift() {
           scale: 0.94,
         }}
         animate={{
-          y: [0, -3, 0],
-        }}
+  y: [0, -3, 0],
+  scale: showGift ? 1.08 : 1,
+}}
         transition={{
           duration: 2.5,
           repeat: Infinity,
@@ -33,8 +34,20 @@ export default function Gift() {
       >
         <GiftIllustration />
       </motion.div>
+<AnimatePresence>
+  {showGift && (
+    <motion.div
+      className="fixed inset-0 z-40 bg-black/30 backdrop-blur-[2px]"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={() => setShowGift(false)}
+    />
+  )}
+</AnimatePresence>
+
         {showGift && (
-  <div className="absolute right-full mr-6 bottom-32 z-50">
+   <div className="fixed inset-0 z-50 flex items-center justify-center p-6">
     <GiftLetter
       open={showGift}
       onClose={() => setShowGift(false)}

@@ -13,36 +13,35 @@ interface Props {
 const songs = [
   {
     id: 1,
-    title: "🌙 Cozy Night Ambience",
-    artist: "Background",
-    src: "/music/ambience.mp3",
+    title: "🌙 Snowfall",
+    artist: "Oneheart",
+    src: "/music/snowfall.mp3",
   },
   {
     id: 2,
-    title: "Song 1",
-    artist: "Favorite",
-    src: "/music/song1.mp3",
+    title: "TiK ToK",
+    artist: "Kesha",
+    src: "/music/tiktok.mp3",
   },
   {
     id: 3,
-    title: "Song 2",
-    artist: "Favorite",
-    src: "/music/song2.mp3",
+    title: "needy",
+    artist: "Ariana Grande",
+    src: "/music/needy.mp3",
   },
   {
     id: 4,
-    title: "Song 3",
-    artist: "Favorite",
-    src: "/music/song3.mp3",
+    title: "God is a woman",
+    artist: "Ariana Grande",
+    src: "/music/god-is-a-woman.mp3",
   },
   {
     id: 5,
-    title: "Song 4",
-    artist: "Favorite",
-    src: "/music/song4.mp3",
+    title: "Until I Found You",
+    artist: "Stephen Sanchez",
+    src: "/music/until-i-found-you.mp3",
   },
 ];
-
 export default function RecordPlayerModal({
   open,
   onClose,
@@ -88,11 +87,11 @@ export default function RecordPlayerModal({
               className="w-full max-w-md rounded-3xl bg-[#FFF8F0] p-8 shadow-2xl"
             >
               <h2 className="text-center text-3xl font-semibold">
-                Tonight&apos;s Playlist
+                For Quiet Evenings
               </h2>
 
               <p className="mt-2 text-center text-sm text-gray-500">
-                Choose something to play.
+                A few songs that felt right for this room.
               </p>
 
               <div className="mt-8 space-y-3">

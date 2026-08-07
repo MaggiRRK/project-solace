@@ -1,0 +1,111 @@
+[33m9ba54a6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m S's World v1.0
+ public/music/snowfall.mp3 | Bin [31m145749817[m -> [32m58300008[m bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+[33me0bb898[m Final World v1.0
+ components/loading/LoadingScreen.tsx      |   4 [32m+[m[31m--[m
+ components/music/RecordPlayerModal.tsx    |  35 [32m++++++++++[m[31m-----------[m
+ components/room/Room.tsx                  |   2 [32m+[m[31m-[m
+ components/room/furniture/Gift.tsx        |  21 [32m++++++++++[m[31m---[m
+ components/room/furniture/GiftLetter.tsx  |   2 [32m+[m[31m-[m
+ components/room/furniture/RecordStand.tsx |  50 [31m------------------------------[m
+ public/music/god-is-a-woman.mp3           | Bin [31m0[m -> [32m7908968[m bytes
+ public/music/needy.mp3                    | Bin [31m0[m -> [32m6868250[m bytes
+ public/music/snowfall.mp3                 | Bin [31m0[m -> [32m145749817[m bytes
+ public/music/tiktok.mp3                   | Bin [31m0[m -> [32m8017638[m bytes
+ public/music/until-i-found-you.mp3        | Bin [31m0[m -> [32m6985279[m bytes
+ 11 files changed, 38 insertions(+), 76 deletions(-)
+[33m22653ea[m[33m ([m[1;31morigin/main[m[33m)[m Add PWA manifest and metadata
+ app/layout.tsx              | 28 [32m+++++++++++++++++++++++++++[m[31m-[m
+ next.config.ts              |  2 [32m+[m[31m-[m
+ package-lock.json           | 36 [32m++++++++++++++++++[m[31m------------------[m
+ public/manifest.webmanifest | 22 [32m++++++++++++++++++++++[m
+ 4 files changed, 68 insertions(+), 20 deletions(-)
+[33mfec9eff[m Complete Project Solace interactions and polish
+ app/layout.tsx                                   |   6 [32m+[m[31m-[m
+ app/page.tsx                                     |  26 [32m+[m[31m---[m
+ components/UI/GiftModal.tsx                      |  98 [32m++++++++++[m[31m--[m
+ components/intro/FloatingPetals.tsx              |  43 [32m++++++[m
+ components/intro/FlowerIntro.tsx                 |  93 [32m++++++++++++[m
+ components/intro/LilyBouquet.tsx                 |  86 [32m+++++++++++[m
+ components/loading/LoadingScreen.tsx             |  10 [32m+[m[31m-[m
+ components/music/MusicProvider.tsx               |  70 [32m+++++++++[m
+ components/music/RecordPlayerModal.tsx           | 158 [32m+++++++++++++++++++[m
+ components/notebook/Notebook.tsx                 |  69 [32m++++[m[31m-----[m
+ components/notebook/NotebookModal.tsx            | 154 [32m++++++++++++++++[m[31m---[m
+ components/room/Room.tsx                         |  83 [32m+++++++[m[31m---[m
+ components/room/data/thoughts.ts                 |  33 [32m++++[m
+ components/room/effects/FloatingThought.tsx      | 150 [32m+++++++++++++++++++[m
+ components/room/effects/MoonLight.tsx            |  14 [32m+[m[31m-[m
+ components/room/effects/RoomGlow.tsx             |  18 [32m++[m[31m-[m
+ components/room/furniture/Bed.tsx                |  14 [32m+[m[31m-[m
+ components/room/furniture/Gift.tsx               |  26 [32m++[m[31m--[m
+ components/room/furniture/GiftLetter.tsx         | 183 [32m+++++++++++++++++++++++[m
+ components/room/furniture/RecordPlayer.tsx       |  55 [32m+++++++[m
+ components/room/furniture/RecordStand.tsx        |  50 [32m+++++++[m
+ components/room/furniture/ThoughtJar.tsx         |  52 [32m+++[m[31m----[m
+ components/room/furniture/ThoughtNote.tsx        | 120 [32m+++++++++++++++[m
+ components/room/svg/RecordPlayerIllustration.tsx | 142 [32m++++++++++++++++++[m
+ package-lock.json                                |  20 [32m+++[m
+ package.json                                     |   1 [32m+[m
+ public/images/lillies.png                        | Bin [31m0[m -> [32m2327212[m bytes
+ 27 files changed, 1593 insertions(+), 181 deletions(-)
+[33m1b855b8[m Initial commit: Project Solace
+ app/globals.css                                 | 234 [32m++++++++++++++++++++++[m[31m--[m
+ app/layout.tsx                                  |  49 [32m++++[m[31m-[m
+ app/page.tsx                                    |  41 [32m++++[m[31m-[m
+ components/UI/GiftModal.tsx                     |  98 [32m++++++++++[m
+ components/UI/NotebookModal.tsx                 | 128 [32m+++++++++++++[m
+ components/UI/ObjectModal.tsx                   |  88 [32m+++++++++[m
+ components/UI/ThoughtModal.tsx                  |  59 [32m++++++[m
+ components/book/BookCover.tsx                   |  34 [32m++++[m
+ components/book/IntroPages.tsx                  | 109 [32m+++++++++++[m
+ components/common/AnimatedReveal.tsx            |  49 [32m+++++[m
+ components/loading/LoadingMessage.tsx           |  45 [32m+++++[m
+ components/loading/LoadingScreen.tsx            | 117 [32m++++++++++[m[31m--[m
+ components/loading/MoonGlow.tsx                 |  29 [32m+++[m
+ components/loading/ProgressBar.tsx              |  50 [32m+++++[m
+ components/loading/ShootingStar.tsx             |  32 [32m++++[m
+ components/loading/StarField.tsx                |  59 [32m++++++[m
+ components/notebook/Notebook.tsx                |  46 [32m+++++[m
+ components/notebook/NotebookModal.tsx           |  72 [32m++++++++[m
+ components/notebook/NotebookPage.tsx            |   0
+ components/room/Floor.tsx                       |  39 [32m++++[m
+ components/room/Room.tsx                        | 172 [32m+++++++++++++++++[m
+ components/room/RoomCanvas.tsx                  |  33 [32m++++[m
+ components/room/Wall.tsx                        |  43 [32m+++++[m
+ components/room/effects/DustParticles.tsx       |  76 [32m++++++++[m
+ components/room/effects/FloatingHearts.tsx      |  42 [32m+++++[m
+ components/room/effects/MoonLight.tsx           |  30 [32m+++[m
+ components/room/effects/NightOverlay.tsx        |  45 [32m+++++[m
+ components/room/effects/PaperTexture.tsx        |  22 [32m+++[m
+ components/room/effects/RoomGlow.tsx            |  61 [32m++++++[m
+ components/room/effects/RoomShootingStar.tsx    |  89 [32m+++++++++[m
+ components/room/effects/Vignette.tsx            |  16 [32m++[m
+ components/room/furniture/Bed.tsx               |  61 [32m++++++[m
+ components/room/furniture/Curtains.tsx          |  74 [32m++++++++[m
+ components/room/furniture/FairyLights.tsx       |  43 [32m+++++[m
+ components/room/furniture/Gift.tsx              |  41 [32m+++++[m
+ components/room/furniture/Lamp.tsx              |  83 [32m+++++++++[m
+ components/room/furniture/PhotoFrame.tsx        |  33 [32m++++[m
+ components/room/furniture/Plant.tsx             |  73 [32m++++++++[m
+ components/room/furniture/Rug.tsx               |  34 [32m++++[m
+ components/room/furniture/Shelf.tsx             |  22 [32m+++[m
+ components/room/furniture/Teddy.tsx             |  89 [32m+++++++++[m
+ components/room/furniture/ThoughtJar.tsx        |  50 [32m+++++[m
+ components/room/furniture/Window.tsx            |  61 [32m++++++[m
+ components/room/svg/BedIllustration.tsx         |  86 [32m+++++++++[m
+ components/room/svg/FairyLightsIllustration.tsx |  42 [32m+++++[m
+ components/room/svg/GiftIllustration.tsx        |  85 [32m+++++++++[m
+ components/room/svg/NotebookIllustration.tsx    |  65 [32m+++++++[m
+ components/room/svg/PhotoFrameIllustration.tsx  | 111 [32m+++++++++++[m
+ components/room/svg/PlantIllustration.tsx       |  41 [32m+++++[m
+ components/room/svg/ShelfIllustration.tsx       | 221 [32m++++++++++++++++++++++[m
+ components/room/svg/TeddyIllustration.tsx       |  68 [32m+++++++[m
+ components/room/svg/ThoughtJarIllustration.tsx  |  83 [32m+++++++++[m
+ components/room/svg/WindowIllustration.tsx      | 116 [32m++++++++++++[m
+ components/room/zones/FloorZone.tsx             |  25 [32m+++[m
+ components/room/zones/WallZone.tsx              |  22 [32m+++[m
+ constants/messages.ts                           |  25 [32m+++[m
+ package.json                                    |   2 [32m+[m[31m-[m
+ public/images/room.png                          | Bin [31m0[m -> [32m2765676[m bytes
+ 58 files changed, 3623 insertions(+), 40 deletions(-)

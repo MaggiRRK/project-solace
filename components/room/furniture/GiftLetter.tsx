@@ -46,7 +46,7 @@ export default function GiftLetter({
             border-[#E7D8C7]
             bg-[#FFFCF8]
             p-6
-            shadow-[0_15px_40px_rgba(0,0,0,0.18)]
+            shadow-[0_25px_60px_rgba(0,0,0,0.35)]
           "
         >
                   <>

@@ -86,9 +86,9 @@ export default function LoadingScreen({
             transition={{
               duration: 1,
             }}
-            className="heading text-6xl md:text-7xl tracking-wide text-[#FFF8F1] drop-shadow-lg"
+            className="heading text-xl md:text-6xl tracking-normal text-[#FFF8F1] drop-shadow-lg"
           >
-            Project Solace
+            Subhana&apos;s World
           </motion.h1>
 
           <motion.p
