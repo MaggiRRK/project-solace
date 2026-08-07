@@ -39,15 +39,25 @@ export default function GiftLetter({
             duration: 0.45,
           }}
           className="
-            origin-left
-            w-72
-            rounded-2xl
-            border
-            border-[#E7D8C7]
-            bg-[#FFFCF8]
-            p-6
-            shadow-[0_25px_60px_rgba(0,0,0,0.35)]
-          "
+fixed
+left-1/2
+top-1/2
+-z-?
+w-[90vw]
+max-w-md
+max-h-[85vh]
+-translate-x-1/2
+-translate-y-1/2
+overflow-y-auto
+origin-left
+rounded-2xl
+border
+border-[#E7D8C7]
+bg-[#FFFCF8]
+p-6
+shadow-[0_25px_60px_rgba(0,0,0,0.35)]
+z-50
+"
         >
                   <>
           <h3 className="heading text-2xl text-[#6B4F3B]">
@@ -108,7 +118,7 @@ export default function GiftLetter({
                     whitespace-pre-line
                     text-[21px]
                     leading-9
-                    max-h-105
+                    max-h-96
                     overflow-y-auto
                     pr-2
                     text-[#5B4638]
