@@ -87,7 +87,7 @@ z-50
       className="mt-6 border-t border-[#EADBCB] pt-6"
     >
       <Image
-  src="/images/letter.png"
+  src="/images/letter2.png"
   alt="Letter"
   width={100}
   height={300}

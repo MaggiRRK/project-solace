@@ -10,7 +10,7 @@ export default function LetterPage() {
   return (
     <main className="
       min-h-screen
-      bg-[#F7F1E8]
+      bg-[#560404]
       flex
       flex-col
       items-center
@@ -19,7 +19,7 @@ export default function LetterPage() {
     ">
 
       <Image
-        src="/images/letter.png"
+        src="/images/letter2.png"
         alt="Letter"
         width={800}
         height={1000}
